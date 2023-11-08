@@ -1,18 +1,26 @@
 <template>
-  <v-app>
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+    <v-app>
+        <BroadcastView />
+        <v-main>
+            <router-view />
+        </v-main>
+
+    </v-app>
 </template>
 
 <script>
 
-export default {
-  name: 'App',
+import BroadcastView from "@/components/BroadcastView.vue";
 
-  data: () => ({
-    //
-  }),
+export default {
+    name: 'App',
+
+    components: {
+        BroadcastView
+    },
+
+    data: () => ({
+        //
+    }),
 }
 </script>
