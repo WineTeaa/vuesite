@@ -30,22 +30,22 @@
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
-
         <v-app-bar
             :elevation="0"
-            class="bg-grey-darken-4 d-flex align-center"
+            class="bg-grey-darken-4"
             height="49"
         >
-
-            <v-btn
-                icon="mdi-arrow-left"
-                color="#E7CFB8"
-                size="40"
-            ></v-btn>
+            <template v-slot:prepend>
+                <v-btn
+                    icon="mdi-arrow-left"
+                    color="#E7CFB8"
+                    size="40"
+                ></v-btn>
+            </template>
 
             <span class="text-white text-subtitle-1 ml-2">broadcast name</span>
 
-            <v-col>
+            <template v-slot:append>
                 <v-btn
                     right
                     icon="mdi-theme-light-dark"
@@ -66,9 +66,8 @@
                     color="#E7CFB8"
                     size="40"
                 ></v-btn>
-            </v-col>
+            </template>
         </v-app-bar>
-
 
         <v-main
             class="d-flex align-center flex-column justify-end bg-grey-darken-3"
